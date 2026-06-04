@@ -1,6 +1,7 @@
 import { FormEvent, useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, clearToken, getToken, setToken } from "../api/client";
+import { hasLiveApi } from "../lib/projectsService";
 import { LiquidGlass } from "../components/LiquidGlass";
 import { Navbar } from "../components/Navbar";
 import type { Project } from "../types/project";
@@ -98,6 +99,23 @@ export function AdminPage() {
     loadProjects();
     if (editing?.id === id) openCreate();
   };
+
+  if (!hasLiveApi) {
+    return (
+      <div className="min-h-screen flex items-center justify-center px-6 animate-gradient-bg">
+        <LiquidGlass className="w-full max-w-md p-10 text-center" hover={false}>
+          <h1 className="font-display text-3xl font-bold italic mb-4">Admin</h1>
+          <p className="text-ink/65 font-light leading-relaxed">
+            En producción los cambios los hace el asistente: dime qué quieres modificar
+            (textos, proyectos, colores) y se publica automáticamente.
+          </p>
+          <Link to="/" className="inline-block mt-8 text-accent font-medium hover:underline">
+            ← Volver al sitio
+          </Link>
+        </LiquidGlass>
+      </div>
+    );
+  }
 
   if (!token) {
     return (

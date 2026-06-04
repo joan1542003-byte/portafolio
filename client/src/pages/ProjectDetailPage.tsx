@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { api } from "../api/client";
+import { loadProject } from "../lib/projectsService";
 import { Navbar } from "../components/Navbar";
 import { Reveal } from "../components/Reveal";
 import { usePageTheme } from "../context/PageThemeContext";
@@ -14,8 +14,7 @@ export function ProjectDetailPage() {
 
   useEffect(() => {
     if (!id) return;
-    api
-      .getProject(id)
+    loadProject(id)
       .then((p) => {
         setProject(p);
         setBackgroundColor(p.backgroundColor);
