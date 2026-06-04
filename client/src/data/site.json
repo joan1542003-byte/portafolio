@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "eyebrow": "Joan · Diseño multidisciplinario",
+    "titleWords": ["Diseño", "Extraordinario."],
+    "subtitle": "Gráfico, web, inteligencia artificial y branding. Creo sistemas visuales con criterio editorial y ejecución técnica impecable.",
+    "ctaLabel": "Ver proyectos destacados",
+    "ctaHref": "#proyectos"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "lead": "Diseñador multidisciplinario enfocado en identidad, experiencias digitales y narrativas visuales.",
+    "body": "Desde el diseño de marca hasta la visualización de datos y el UX/UI, construyo piezas que comunican con claridad y personalidad. Mi trabajo combina investigación, tipografía expresiva y herramientas actuales —incluida la IA— siempre con dirección de arte humana.",
+    "highlights": [
+      "Branding e identidad visual",
+      "Diseño de información y señalética",
+      "UX/UI y prototipado en Figma",
+      "Motion, video e IA generativa aplicada"
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Colaboramos en un proyecto o necesitas una pieza específica? Escríbeme.",
+    "email": "hola@joandesign.cl",
+    "linkedin": "https://linkedin.com/in/joandesign",
+    "location": "Chile"
+  },
+  "toolsTitle": "Herramientas",
+  "toolsSubtitle": "Stack creativo con el que desarrollo cada entrega."
+}

@@ -9,7 +9,7 @@
     envVars:
       - key: ADMIN_PASSWORD
         generateValue: true
-      - key: ADMIN_TOKEN
-        value: admin-token-xyz
       - key: NODE_VERSION
         value: "22"
+      - key: CORS_ORIGIN
+        value: https://portafolio-ebon-chi-65.vercel.app,https://portafolio-joan.vercel.app

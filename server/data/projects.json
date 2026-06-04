@@ -1,60 +1,123 @@
 [
   {
-    "id": "identidad-marca-luma",
-    "title": "Luma Studio",
+    "id": "mama-estudiara-diseno",
+    "title": "Mi Mamá Quería Que Estudiara",
+    "category": "Diseño de marca | Podcast",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1478737270239-2f94babe9940?w=900&q=80",
+    "backgroundColor": "#fce7f3",
+    "description": "Identidad visual y sistema gráfico para podcast narrativo: tipografía expresiva, portadas modulares y piezas para redes que mantienen coherencia emocional en cada episodio.",
+    "tags": ["Branding", "Podcast", "Editorial"],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590602847861-f357a9334129?w=1200&q=80",
+      "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=1200&q=80"
+    ],
+    "heroTitle": "Marca con voz propia.",
+    "order": 0,
+    "featured": true,
+    "isNew": true
+  },
+  {
+    "id": "nevado-tres-cruces",
+    "title": "Parque Nacional Nevado de Tres Cruces",
     "category": "Branding",
-    "thumbnailUrl": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
-    "backgroundColor": "#fde8d8",
-    "description": "Sistema de identidad visual para un estudio creativo: logotipo modular, paleta cálida y aplicaciones editoriales que unifican presencia física y digital.",
-    "tags": ["Branding", "Identidad", "Editorial"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+    "backgroundColor": "#dbeafe",
+    "description": "Sistema de identidad para patrimonio natural: pictogramas, paleta inspirada en la cordillera y aplicaciones en señalética y material educativo del parque.",
+    "tags": ["Branding", "Naturaleza", "Señalética"],
     "gallery": [
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1518173946549-947c6e8f4c5e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80"
     ],
-    "heroTitle": "Identidad que respira luz."
+    "heroTitle": "Identidad en altura.",
+    "order": 1,
+    "featured": true,
+    "isNew": true
   },
   {
-    "id": "web-experiencia-atlas",
-    "title": "Atlas Digital",
-    "category": "Web Design",
-    "thumbnailUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
-    "backgroundColor": "#e8f4fc",
-    "description": "Diseño y desarrollo de una experiencia web inmersiva con narrativa scroll-driven, tipografía display y microinteracciones que guían al usuario.",
-    "tags": ["Web", "UX", "Motion"],
+    "id": "zoo-condor",
+    "title": "ZOO Nacional: Rehabilitación de un Cóndor",
+    "category": "Diseño de información",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1437622368352-7a9948b9d958?w=900&q=80",
+    "backgroundColor": "#ecfccb",
+    "description": "Infografías y piezas explicativas sobre conservación del cóndor andino: jerarquía visual clara, ilustración funcional y lenguaje accesible para visitantes del zoológico.",
+    "tags": ["Info design", "Conservación", "Ilustración"],
     "gallery": [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
-      "https://images.unsplash.com/photo-1517694712202-14dd9538a880?w=1200&q=80"
+      "https://images.unsplash.com/photo-1548199973-03cce30bbc87?w=1200&q=80",
+      "https://images.unsplash.com/photo-1551966775-4c5dd6a085a8?w=1200&q=80"
     ],
-    "heroTitle": "Navegación con alma editorial."
+    "heroTitle": "Datos que protegen especies.",
+    "order": 2,
+    "featured": true,
+    "isNew": true
   },
   {
-    "id": "ia-campana-nova",
-    "title": "Nova Campaign",
-    "category": "IA & Visual",
-    "thumbnailUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
-    "backgroundColor": "#f3e8ff",
-    "description": "Dirección de arte asistida por IA para campaña multicanal: prompts curados, postproducción humana y coherencia de marca en cada activo.",
-    "tags": ["IA", "Campaña", "Dirección de arte"],
+    "id": "mirador-parquemet",
+    "title": "Mirador Parquemet",
+    "category": "Diseño de información",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&q=80",
+    "backgroundColor": "#d1fae5",
+    "description": "Señalética y mapas para experiencia en el parque urbano: iconografía consistente, rutas de visita y paneles interpretativos integrados al entorno.",
+    "tags": ["Wayfinding", "Mapas", "Urbano"],
     "gallery": [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80",
-      "https://images.unsplash.com/photo-1676299085922-eca837a0062e?w=1200&q=80",
-      "https://images.unsplash.com/photo-1686191128892-3b28c239e330?w=1200&q=80"
+      "https://images.unsplash.com/photo-1519331379776-f564fecb48f8?w=1200&q=80",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80"
     ],
-    "heroTitle": "Creatividad amplificada, criterio humano."
+    "heroTitle": "Orientar sin ruido visual.",
+    "order": 3,
+    "featured": true,
+    "isNew": false
   },
   {
-    "id": "grafico-festival-rio",
-    "title": "Festival Río",
-    "category": "Diseño Gráfico",
-    "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
-    "backgroundColor": "#fef3c7",
-    "description": "Piezas gráficas para festival cultural: pósters, señalética y redes sociales con sistema tipográfico expresivo y color naranja como hilo conductor.",
-    "tags": ["Gráfico", "Eventos", "Póster"],
+    "id": "darkwood",
+    "title": "Darkwood",
+    "category": "Edición de video | IA",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1611162616305-c69b3fa7a132?w=900&q=80",
+    "backgroundColor": "#e7e5e4",
+    "description": "Pieza audiovisual con atmósfera cinematográfica: edición en DaVinci Resolve, tratamiento de color y apoyo de IA para composición y ritmo narrativo.",
+    "tags": ["Video", "IA", "Postproducción"],
     "gallery": [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80",
-      "https://images.unsplash.com/photo-1506157786151-6c9cec5f8a30?w=1200&q=80"
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&q=80",
+      "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1200&q=80"
     ],
-    "heroTitle": "Ritmo visual para la calle."
+    "heroTitle": "Luz y sombra en movimiento.",
+    "order": 4,
+    "featured": true,
+    "isNew": false
+  },
+  {
+    "id": "cuerpo-completo",
+    "title": "Cuerpo Completo",
+    "category": "Visualización de datos",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&q=80",
+    "backgroundColor": "#ffedd5",
+    "description": "Dashboard y gráficos para comunicar información corporal y de salud: paleta cálida, jerarquía tipográfica y lectura progresiva de métricas complejas.",
+    "tags": ["Data viz", "Salud", "UI"],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551281049-7b48a4a731ca?w=1200&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+    ],
+    "heroTitle": "El cuerpo como dato legible.",
+    "order": 5,
+    "featured": true,
+    "isNew": false
+  },
+  {
+    "id": "disney-plus-ux",
+    "title": "Caso de estudio UX/UI: Disney+",
+    "category": "UX/UI",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1626813645154-d4dcee03feac?w=900&q=80",
+    "backgroundColor": "#ede9fe",
+    "description": "Rediseño conceptual del flujo de descubrimiento en streaming: arquitectura de información, prototipo en Figma y pruebas de usabilidad documentadas.",
+    "tags": ["UX/UI", "Figma", "Caso de estudio"],
+    "gallery": [
+      "https://images.unsplash.com/photo-1611328524736-ffed517c002f?w=1200&q=80",
+      "https://images.unsplash.com/photo-1611162618071-b8213bd28072?w=1200&q=80",
+      "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1200&q=80"
+    ],
+    "heroTitle": "Menos fricción, más historias.",
+    "order": 6,
+    "featured": true,
+    "isNew": false
   }
 ]

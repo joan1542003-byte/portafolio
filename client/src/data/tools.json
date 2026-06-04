@@ -1,0 +1,44 @@
+[
+  {
+    "id": "figma",
+    "name": "Figma",
+    "description": "Prototipado y diseño de interfaces (UI/UX). Centro de operaciones donde unifico los proyectos.",
+    "icon": "figma",
+    "order": 0
+  },
+  {
+    "id": "indesign",
+    "name": "Adobe InDesign",
+    "description": "Diseño editorial, tipografía y maquetación profesional de documentos.",
+    "icon": "book-open",
+    "order": 1
+  },
+  {
+    "id": "illustrator",
+    "name": "Adobe Illustrator",
+    "description": "Logotipos, iconografía y gráficos vectoriales de alta precisión.",
+    "icon": "pen-tool",
+    "order": 2
+  },
+  {
+    "id": "after-effects",
+    "name": "Adobe After Effects",
+    "description": "Animaciones, microinteracciones y motion graphics.",
+    "icon": "clapperboard",
+    "order": 3
+  },
+  {
+    "id": "photoshop",
+    "name": "Adobe Photoshop",
+    "description": "Edición avanzada de imágenes, composición y retoque digital.",
+    "icon": "image",
+    "order": 4
+  },
+  {
+    "id": "davinci",
+    "name": "DaVinci Resolve",
+    "description": "Edición de video avanzada — nivel cine y postproducción.",
+    "icon": "film",
+    "order": 5
+  }
+]

@@ -1,11 +1,7 @@
-import type { Project } from "../types/project";
+import type { Project, SiteContent, Tool } from "../types/project";
 
 const API_BASE = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "");
 const TOKEN_KEY = "portfolio_admin_token";
-
-function apiUrl(path: string): string {
-  return `${API_BASE}${path}`;
-}
 
 export function getToken(): string | null {
   return localStorage.getItem(TOKEN_KEY);
@@ -19,10 +15,11 @@ export function clearToken(): void {
   localStorage.removeItem(TOKEN_KEY);
 }
 
-async function request<T>(
-  path: string,
-  options: RequestInit = {}
-): Promise<T> {
+function apiUrl(path: string): string {
+  return `${API_BASE}${path}`;
+}
+
+async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const headers: HeadersInit = {
     "Content-Type": "application/json",
     ...(options.headers ?? {}),
@@ -41,17 +38,45 @@ async function request<T>(
 }
 
 export const api = {
+  health: () => request<{ ok: boolean }>("/api/health"),
+
   login: (password: string) =>
-    request<{ token: string }>("/api/auth/login", {
+    request<{ token: string; expiresIn: number }>("/api/auth/login", {
       method: "POST",
       body: JSON.stringify({ password }),
+    }),
+
+  logout: () => request<void>("/api/auth/logout", { method: "POST" }),
+
+  verify: () => request<{ valid: boolean }>("/api/auth/verify"),
+
+  getSite: () => request<SiteContent>("/api/site"),
+
+  updateSite: (site: SiteContent) =>
+    request<SiteContent>("/api/site", {
+      method: "PUT",
+      body: JSON.stringify(site),
+    }),
+
+  getTools: () => request<Tool[]>("/api/tools"),
+
+  updateTools: (tools: Tool[]) =>
+    request<Tool[]>("/api/tools", {
+      method: "PUT",
+      body: JSON.stringify(tools),
     }),
 
   getProjects: () => request<Project[]>("/api/projects"),
 
   getProject: (id: string) => request<Project>(`/api/projects/${id}`),
 
-  createProject: (project: Omit<Project, "id"> & { id?: string }) =>
+  reorderProjects: (ids: string[]) =>
+    request<Project[]>("/api/projects/reorder", {
+      method: "POST",
+      body: JSON.stringify({ ids }),
+    }),
+
+  createProject: (project: Partial<Project>) =>
     request<Project>("/api/projects", {
       method: "POST",
       body: JSON.stringify(project),

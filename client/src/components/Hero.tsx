@@ -1,25 +1,32 @@
 import { motion } from "framer-motion";
+import type { SiteContent } from "../types/project";
 
-const words = ["Diseño", "Extraordinario."];
-
-export function Hero() {
+export function Hero({ site }: { site: SiteContent["hero"] }) {
   return (
-    <section className="relative min-h-[88vh] flex flex-col justify-center items-center text-center px-6 pt-32 pb-20">
-      <p className="text-sm uppercase tracking-[0.3em] text-ink/50 font-medium mb-8">
-        Diseñador multidisciplinario
-      </p>
-      <h1 className="font-display font-bold italic text-ink leading-[0.95] max-w-4xl">
-        {words.map((word, wi) => (
-          <span key={word} className="inline-block mr-[0.2em] last:mr-0">
+    <section className="relative min-h-[92vh] flex flex-col justify-center px-6 sm:px-10 pt-36 pb-24 max-w-6xl mx-auto">
+      <motion.p
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="section-label mb-10"
+      >
+        {site.eyebrow}
+      </motion.p>
+
+      <h1 className="font-display font-bold italic text-ink leading-[0.92] max-w-5xl">
+        {site.titleWords.map((word, wi) => (
+          <span key={word} className="block sm:inline sm:mr-[0.15em]">
             {word.split("").map((char, ci) => (
               <motion.span
-                key={`${wi}-${ci}`}
-                className="inline-block text-5xl sm:text-7xl md:text-8xl text-accent last:text-ink"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
+                key={`${wi}-${ci}-${char}`}
+                className={`inline-block text-[clamp(2.75rem,10vw,5.5rem)] ${
+                  wi === 0 ? "text-accent" : "text-ink"
+                }`}
+                initial={{ opacity: 0, y: 48, rotate: wi === 0 ? -2 : 0 }}
+                animate={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{
-                  delay: wi * 0.15 + ci * 0.04,
-                  duration: 0.5,
+                  delay: wi * 0.12 + ci * 0.035,
+                  duration: 0.55,
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
@@ -29,24 +36,36 @@ export function Hero() {
           </span>
         ))}
       </h1>
+
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="mt-10 max-w-xl text-lg text-ink/65 font-light"
+        transition={{ delay: 0.9, duration: 0.65 }}
+        className="mt-12 max-w-xl text-lg sm:text-xl text-ink/60 font-light leading-relaxed"
       >
-        Gráfico, web, IA y branding — interfaces editoriales con criterio visual y
-        ejecución técnica impecable.
+        {site.subtitle}
       </motion.p>
-      <motion.a
-        href="#proyectos"
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="btn-scale mt-12 inline-flex items-center gap-2 rounded-squircle bg-accent px-8 py-4 text-cream font-medium shadow-lg shadow-accent/25"
+        transition={{ delay: 1.15 }}
+        className="mt-14 flex flex-wrap gap-4"
       >
-        Ver proyectos
-      </motion.a>
+        <a href={site.ctaHref} className="btn-primary">
+          {site.ctaLabel}
+        </a>
+        <a href="#sobre-mi" className="btn-ghost">
+          Conocer más
+        </a>
+      </motion.div>
+
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="mt-20 h-px w-24 bg-accent/40 origin-left"
+      />
     </section>
   );
 }

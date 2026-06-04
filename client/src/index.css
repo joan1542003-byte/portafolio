@@ -3,72 +3,135 @@
 @tailwind utilities;
 
 @layer base {
-  *,
-  *::before,
-  *::after {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 1.5s;
-    transition-timing-function: ease-in-out;
+  :root {
+    --cream: #fffdf8;
+    --ink: #1c1917;
+    --accent: #ea580c;
+    --glass-bg: rgba(255, 255, 255, 0.38);
+    --glass-border: rgba(255, 255, 255, 0.85);
+    --glass-stroke: rgba(255, 255, 255, 0.95);
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: var(--cream);
   }
 
   body {
     @apply font-sans font-light text-ink antialiased;
-    background-color: #fffdf8;
+    background-color: var(--cream);
     min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(234, 88, 12, 0.18);
+    color: var(--ink);
   }
 }
 
 @layer components {
+  .grain {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
   .liquid-glass {
-    @apply bg-white/40 backdrop-blur-md backdrop-saturate-150 border border-white/50;
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px) saturate(1.45);
+    -webkit-backdrop-filter: blur(14px) saturate(1.45);
+    border: 1px solid var(--glass-border);
+    outline: 1px solid var(--glass-stroke);
+    outline-offset: -1px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.72);
+  }
+
+  .liquid-glass-elevated {
     box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.6),
-      0 8px 32px rgba(28, 25, 23, 0.06);
+      inset 0 1px 1px rgba(255, 255, 255, 0.72),
+      0 4px 20px rgba(28, 25, 23, 0.04);
   }
 
   .liquid-glass-hover {
-    @apply transition-all duration-300 ease-out;
+    @apply transition-all duration-500 ease-out;
   }
 
   .liquid-glass-hover:hover {
-    @apply bg-white/55 -translate-y-1;
+    background: rgba(255, 255, 255, 0.52);
+    transform: translateY(-3px);
     box-shadow:
-      inset 0 1px 2px rgba(255, 255, 255, 0.75),
-      0 16px 40px rgba(28, 25, 23, 0.1);
+      inset 0 1px 2px rgba(255, 255, 255, 0.88),
+      0 8px 24px rgba(28, 25, 23, 0.05);
   }
 
+  .squircle {
+    border-radius: 2.5rem;
+  }
   .btn-scale {
-    @apply transition-transform duration-200 active:scale-95;
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  .btn-scale:active {
+    @apply scale-95;
   }
 
   .btn-scale:hover {
     @apply scale-[1.03];
   }
 
+
+  .btn-primary {
+    @apply btn-scale inline-flex items-center justify-center gap-2 rounded-squircle bg-accent px-8 py-4 text-cream font-medium;
+    box-shadow: 0 2px 12px rgba(234, 88, 12, 0.22);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 4px 18px rgba(234, 88, 12, 0.28);
+  }
+
+  .btn-ghost {
+    @apply btn-scale inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/30 px-5 py-2.5 text-sm font-medium text-ink/80 backdrop-blur-sm;
+  }
+
+  .btn-ghost:hover {
+    @apply border-accent/30 text-accent bg-white/50;
+  }
+
+  .badge-new {
+    @apply inline-flex items-center rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-cream;
+  }
+
+  .section-label {
+    @apply text-[11px] uppercase tracking-[0.35em] text-ink/45 font-medium;
+  }
+
   .animate-gradient-bg {
     background: linear-gradient(
-      135deg,
+      120deg,
       #fffdf8 0%,
-      #fff5eb 25%,
-      #ffedd5 50%,
-      #fffdf8 75%,
-      #fef3c7 100%
+      #fff8f0 30%,
+      #ffedd5 55%,
+      #fffdf8 80%,
+      #fef9ee 100%
     );
-    background-size: 300% 300%;
-    animation: gradient-shift 12s ease infinite;
+    background-size: 280% 280%;
+    animation: gradient-shift 14s ease-in-out infinite;
+  }
+
+  .link-accent {
+    @apply text-accent underline-offset-4 hover:underline transition-colors duration-300;
   }
 }
 
 @keyframes gradient-shift {
   0%,
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 40%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 60%;
   }
 }
