@@ -1,0 +1,15 @@
+﻿services:
+  - type: web
+    name: portafolio-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: ADMIN_TOKEN
+        value: admin-token-xyz
+      - key: NODE_VERSION
+        value: "22"
